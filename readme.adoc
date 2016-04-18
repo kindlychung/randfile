@@ -1,0 +1,20 @@
+= randfile: Generates random filenames
+
+
+== Install
+
+[source,bash]
+------------
+cargo install --git https://github.com/kindlychung/randfile
+------------
+
+== Usage
+
+See `randfile --help`.
+
+== Examples
+
+[source,bash]
+
+---------------
+---------------

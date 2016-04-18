@@ -17,9 +17,10 @@ docopt!(Args derive Debug, "
 randfile
 
 Usage:
-    randfile  <ext> [<outdir>]
+    randfile  [--startwith=<start>] <ext> [<outdir>]
     randfile  (--help | -h)
 ",
+flag_startwith: String,
 arg_ext: String,
 arg_outdir: String
 );
@@ -37,7 +38,10 @@ fn main() {
     } else {
         current_dir
     };
-    let filename = rand_string() + "." + &args.arg_ext;
+    let filename = format!("{}{}.{}",
+                           &args.flag_startwith,
+                           rand_string(),
+                           &args.arg_ext);
     out_path.push(&filename);
     print!("{:?}", out_path);
 }
