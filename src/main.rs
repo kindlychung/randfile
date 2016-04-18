@@ -2,15 +2,10 @@
 #![plugin(docopt_macros)]
 extern crate rustc_serialize;
 extern crate docopt;
-extern crate rand;
+extern crate randfile;
 
-use rand::random;
-use std::path;
-use std::env;
+use randfile::filename::rand_file;
 
-fn rand_string() -> String {
-    (0..15).map(|_| (97u8 + (random::<f32>() * 25.0) as u8) as char).collect()
-}
 
 
 docopt!(Args derive Debug, "
@@ -46,18 +41,9 @@ fn main() {
     if args.flag_help | args.flag_h {
         std::process::exit(0);
     }
-    let current_dir: path::PathBuf = env::current_dir().unwrap();
-    let mut out_path = if &args.arg_parentdir != "" {
-        let mut d = path::PathBuf::new();
-        d.push(&args.arg_parentdir);
-        d
-    } else {
-        current_dir
-    };
-    let filename = format!("{}{}.{}",
-                           &args.flag_startwith,
-                           rand_string(),
-                           &args.arg_ext);
-    out_path.push(&filename);
-    print!("{:?}", out_path);
+    let ext = args.arg_ext;
+    let startwith = args.flag_startwith;
+    let parentdir = args.arg_parentdir;
+    let rf = rand_file(&parentdir, &startwith, &ext);
+    print!("{:?}", rf);
 }
