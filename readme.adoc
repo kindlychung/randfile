@@ -17,4 +17,9 @@ See `randfile --help`.
 [source,bash]
 
 ---------------
+target/debug/randfile --help
+target/debug/randfile --startwith=tmp_ rs /tmp
+target/debug/randfile rs /tmp
+target/debug/randfile rs 
+target/debug/randfile --startwith=tmp_ rs 
 ---------------

@@ -17,12 +17,28 @@ docopt!(Args derive Debug, "
 randfile
 
 Usage:
-    randfile  [--startwith=<start>] <ext> [<outdir>]
+    randfile  [--startwith=<start>] <ext> [<parentdir>]
     randfile  (--help | -h)
+
+Options:
+    --startwith=<start>    Start the filename with the <start> string.
+    --help                 Print this message.
+    -h                     Print this message.
+
+Arguments:
+    ext       Extension name.
+    parentdir    Parent directory of the file.
+
+Examples:
+    target/debug/randfile --help
+    target/debug/randfile --startwith=tmp_ rs /tmp
+    target/debug/randfile rs /tmp
+    target/debug/randfile rs
+    target/debug/randfile --startwith=tmp_ rs
 ",
 flag_startwith: String,
 arg_ext: String,
-arg_outdir: String
+arg_parentdir: String
 );
 
 fn main() {
@@ -31,9 +47,9 @@ fn main() {
         std::process::exit(0);
     }
     let current_dir: path::PathBuf = env::current_dir().unwrap();
-    let mut out_path = if &args.arg_outdir != "" {
+    let mut out_path = if &args.arg_parentdir != "" {
         let mut d = path::PathBuf::new();
-        d.push(&args.arg_outdir);
+        d.push(&args.arg_parentdir);
         d
     } else {
         current_dir
