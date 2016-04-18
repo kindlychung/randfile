@@ -46,4 +46,5 @@ fn main() {
     let parentdir = args.arg_parentdir;
     let rf = rand_file(&parentdir, &startwith, &ext);
     print!("{:?}", rf);
+    std::process::exit(0);
 }

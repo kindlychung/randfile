@@ -6,10 +6,7 @@ pub fn rand_string() -> String {
     (0..15).map(|_| (97u8 + (random::<f32>() * 25.0) as u8) as char).collect()
 }
 
-pub fn rand_file(parentdir: &'static str,
-                 startwith: &'static str,
-                 ext: &'static str)
-                 -> path::PathBuf {
+pub fn rand_file(parentdir: &str, startwith: &str, ext: &str) -> path::PathBuf {
     let current_dir: path::PathBuf = env::current_dir().unwrap();
     let mut out_path = if parentdir != "" {
         let mut d = path::PathBuf::new();
