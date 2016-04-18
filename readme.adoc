@@ -22,4 +22,5 @@ target/debug/randfile --startwith=tmp_ rs /tmp
 target/debug/randfile rs /tmp
 target/debug/randfile rs 
 target/debug/randfile --startwith=tmp_ rs 
+touch $(randfile --startwith=what rs /tmp)
 ---------------

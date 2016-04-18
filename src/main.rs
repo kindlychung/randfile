@@ -30,6 +30,7 @@ Examples:
     target/debug/randfile rs /tmp
     target/debug/randfile rs
     target/debug/randfile --startwith=tmp_ rs
+    touch $(randfile --startwith=what rs /tmp)
 ",
 flag_startwith: String,
 arg_ext: String,
