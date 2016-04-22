@@ -752,13 +752,14 @@ rand_closed	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/githu
 rand_exp	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/distributions/exponential.rs	/^fn rand_exp(b: &mut Bencher) {$/;"	f
 rand_f32	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_f32(b: &mut Bencher) {$/;"	f
 rand_f64	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_f64(b: &mut Bencher) {$/;"	f
+rand_file	/Users/kaiyin/EclipseWorkspace/randfile/src/filename.rs	/^pub fn rand_file(parentdir: &str, startwith: &str, ext: &str) -> path::PathBuf {$/;"	f
 rand_isaac	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_isaac(b: &mut Bencher) {$/;"	f
 rand_isaac64	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_isaac64(b: &mut Bencher) {$/;"	f
 rand_normal	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/distributions/normal.rs	/^fn rand_normal(b: &mut Bencher) {$/;"	f
 rand_open	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/src/rand_impls.rs	/^    fn rand_open() {$/;"	f
 rand_shuffle_100	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_shuffle_100(b: &mut Bencher) {$/;"	f
 rand_std	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_std(b: &mut Bencher) {$/;"	f
-rand_string	/Users/kaiyin/EclipseWorkspace/randfile/src/main.rs	/^fn rand_string() -> String {$/;"	f
+rand_string	/Users/kaiyin/EclipseWorkspace/randfile/src/filename.rs	/^pub fn rand_string() -> String {$/;"	f
 rand_xorshift	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/benches/bench.rs	/^fn rand_xorshift(b: &mut Bencher) {$/;"	f
 random	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/rand-0.3.14/src/lib.rs	/^pub fn random<T: Rand>() -> T {$/;"	f
 read_bool	/Users/kaiyin/.multirust/toolchains/nightly/cargo/registry/src/github.com-88ac128001ac3a9a/docopt-0.6.80/src/dopt.rs	/^    fn read_bool(&mut self) -> Result<bool, Error> {$/;"	f

@@ -25,11 +25,11 @@ Arguments:
     parentdir    Parent directory of the file.
 
 Examples:
-    target/debug/randfile --help
-    target/debug/randfile --startwith=tmp_ rs /tmp
-    target/debug/randfile rs /tmp
-    target/debug/randfile rs
-    target/debug/randfile --startwith=tmp_ rs
+    randfile --help
+    randfile --startwith=tmp_ rs /tmp
+    randfile rs /tmp
+    randfile rs
+    randfile --startwith=tmp_ rs
     touch $(randfile --startwith=what rs /tmp)
 ",
 flag_startwith: String,
